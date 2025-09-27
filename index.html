@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovate Inc. - Creative Solutions</title>
+    
+    <!-- Google Fonts: Poppins for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* --- CSS Variables for Easy Theme Customization (Nature-Inspired Dark Theme) --- */
+        :root {
+            --background-color: #1d2d27; /* Deep forest green */
+            --card-background: #283f36; /* Slightly lighter muted green */
+            --primary-text-color: #e8edea; /* Soft off-white */
+            --secondary-text-color: #9db2a5; /* Muted sage green */
+            --accent-color: #72b074; /* Vibrant moss green */
+            --accent-hover-color: #619463; /* Darker moss green */
+            --shadow-color: rgba(0, 0, 0, 0.25);
+        }
+
+        /* --- General Body & Reset Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--primary-text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        /* --- Main Content Card --- */
+        .main-container {
+            background-color: var(--card-background);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px var(--shadow-color);
+            width: 100%;
+            max-width: 550px;
+            padding: 45px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 30px; /* Space between sections */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* --- Logo Section --- */
+        .logo-container {
+            margin-bottom: -15px; /* Adjust spacing to feel integrated */
+        }
+
+        .logo {
+            width: 80px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: rotate(10deg) scale(1.05);
+        }
+
+        .logo .logo-shape {
+            transition: fill 0.3s ease;
+        }
+
+
+        /* --- Header: Company Name & Tagline --- */
+        .header .company-name {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: var(--primary-text-color);
+        }
+
+        .header .tagline {
+            font-size: 1rem;
+            font-weight: 300;
+            color: var(--secondary-text-color);
+            margin-top: 8px;
+        }
+
+        /* --- About Section --- */
+        .about-section p {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--primary-text-color);
+        }
+
+        /* --- Social Media Links Section --- */
+        .social-media {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Space between icons */
+            flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 20px;
+            border: 1px solid var(--secondary-text-color);
+            border-radius: 50px;
+            color: var(--secondary-text-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .social-button i {
+            font-size: 1.2rem;
+        }
+
+        .social-button:hover {
+            background-color: var(--accent-color);
+            color: #fff;
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* --- Call-to-Action (CTA) Button --- */
+        .cta-button {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #fff;
+            padding: 15px 40px;
+            border-radius: 50px; /* Fully rounded */
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(114, 176, 116, 0.25);
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-hover-color);
+            transform: translateY(-4px); /* Lift effect */
+            box-shadow: 0 6px 20px rgba(114, 176, 116, 0.35);
+        }
+
+        /* --- Responsive Design for Mobile & Tablets --- */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            .main-container {
+                padding: 30px;
+                gap: 25px;
+            }
+            
+            .logo {
+                width: 70px;
+            }
+
+            .header .company-name {
+                font-size: 1.8rem;
+            }
+
+            .header .tagline {
+                font-size: 0.9rem;
+            }
+
+            .about-section p {
+                font-size: 0.95rem;
+            }
+            
+            .social-media {
+                gap: 10px;
+            }
+
+            .social-button {
+                padding: 8px 15px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- The main container acts as a central card for all content -->
+    <main class="main-container">
+
+        <!-- Logo Section -->
+        <div class="logo-container">
+            <!-- Replace the src attribute with the path to your logo file -->
+            <img src="https://placehold.co/100x100/283f36/e8edea?text=Logo" alt="Innovate Inc. Logo" class="logo">
+        </div>
+
+        <!-- 1. Header Section -->
+        <header class="header">
+            <h1 class="company-name">Innovate Inc.</h1>
+            <p class="tagline">Crafting Tomorrow's Solutions, Today.</p>
+        </header>
+
+        <!-- 2. About Section -->
+        <section class="about-section">
+            <p>We are a forward-thinking team dedicated to building elegant and effective digital experiences that drive growth and inspire users.</p>
+        </section>
+
+        <!-- 3. Social Media Section -->
+        <section class="social-media">
+            <!-- Replace "#" with your actual links -->
+            <a href="#" target="_blank" class="social-button">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="#" target="_blank" class="social-button">
+                <i class="fab fa-facebook-f"></i>
+                <span>Facebook</span>
+            </a>
+            <a href="#" target="_blank" class="social-button">
+                <i class="fas fa-globe"></i>
+                <span>Website</span>
+            </a>
+        </section>
+
+        <!-- 4. Call-to-Action Section -->
+        <section class="cta-section">
+            <!-- IMPORTANT: Replace this link with your actual Google Form URL -->
+            <a href="https://docs.google.com/forms/" target="_blank" class="cta-button">
+                Apply Now
+            </a>
+        </section>
+
+    </main>
+
+</body>
+</html>
+
+
